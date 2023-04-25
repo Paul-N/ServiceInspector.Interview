@@ -1,7 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="ServiceInspector.Interview02.Maui.MainPage">
+             x:Class="ServiceInspector.Interview02.Maui.MainPage"
+             xmlns:controls="clr-namespace:ServiceInspector.Interview02.Maui.Controls">
 
     <ScrollView>
         <VerticalStackLayout
@@ -28,8 +29,9 @@
                 FontSize="18"
                 HorizontalOptions="Center" />
 
-            <Button
+            <controls:BackgroundAwareButton
                 x:Name="CounterBtn"
+                CustomBackgroundColor="Red"
                 Text="Click me"
                 SemanticProperties.Hint="Counts the number of times you click"
                 Clicked="OnCounterClicked"
