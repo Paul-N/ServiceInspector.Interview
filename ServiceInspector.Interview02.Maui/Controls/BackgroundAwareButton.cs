@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Microsoft.Maui.Platform;
+﻿using Microsoft.Maui.Platform;
 
 namespace ServiceInspector.Interview02.Maui.Controls
 {
@@ -33,17 +28,11 @@ namespace ServiceInspector.Interview02.Maui.Controls
             if (backgroundColor is not null)
             {
 #if ANDROID
-                var nativeBtn = control.Handler.PlatformView as Android.Widget.Button;
-                if (nativeBtn != null)
-                {
-                    nativeBtn.SetBackgroundColor(backgroundColor.ToPlatform());
-                }
+            if (control.Handler.PlatformView is Android.Widget.Button nativeBtn)
+                nativeBtn.SetBackgroundColor(backgroundColor.ToPlatform());
 #elif IOS || MACCATALYST
-                var nativeBtn = control.Handler.PlatformView as UIKit.UIButton;
-                if (nativeBtn != null)
-                {
-                    nativeBtn.BackgroundColor = backgroundColor.ToPlatform();
-                }
+            if (control.Handler.PlatformView is UIKit.UIButton nativeBtn)
+                nativeBtn.BackgroundColor = backgroundColor.ToPlatform();
 #endif
             }
 

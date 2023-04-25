@@ -1,4 +1,5 @@
 ﻿using Microsoft.Extensions.Logging;
+using ServiceInspector.Interview02.Maui.Controls;
 
 namespace ServiceInspector.Interview02.Maui
 {
@@ -14,9 +15,9 @@ namespace ServiceInspector.Interview02.Maui
                     fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
                     fonts.AddFont("OpenSans-Semibold.ttf", "OpenSansSemibold");
                 });
-
+            
 #if DEBUG
-		builder.Logging.AddDebug();
+        builder.Logging.AddDebug();
 #endif
 
             return builder.Build();

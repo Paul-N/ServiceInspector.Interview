@@ -14,9 +14,17 @@
             count++;
 
             if (count == 1)
-                CounterBtn.Text = $"Clicked {count} time";
+            {
+                var text = $"Clicked {count} time";
+                CounterBtn.Text = text;
+                CounterBtn2.Text = text;
+            }
             else
-                CounterBtn.Text = $"Clicked {count} times";
+            {
+                var text = $"Clicked {count} times";
+                CounterBtn.Text = text;
+                CounterBtn2.Text = text;
+            }
 
             SemanticScreenReader.Announce(CounterBtn.Text);
         }
