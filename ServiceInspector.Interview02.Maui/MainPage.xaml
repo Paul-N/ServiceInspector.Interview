@@ -31,7 +31,7 @@
 
             <controls:BackgroundAwareButton
                 x:Name="CounterBtn"
-                CustomBackgroundColor="Red"
+                CustomBackgroundColor="YellowGreen"
                 Text="Click me"
                 SemanticProperties.Hint="Counts the number of times you click"
                 Clicked="OnCounterClicked"
@@ -39,11 +39,22 @@
 
             <Button
                 x:Name="CounterBtn2"
-                controls:CustomBackgroundColorMapper.CustomBackgroundColor="DarkGreen"
+                controls:CustomBackgroundColorMapper.CustomBackgroundColor="Yellow"
                 Text="Click me"
                 SemanticProperties.Hint="Counts the number of times you click"
                 Clicked="OnCounterClicked"
                 HorizontalOptions="Center" />
+
+            <Button
+                x:Name="CounterBtn3"
+                Text="Click me"
+                SemanticProperties.Hint="Counts the number of times you click"
+                Clicked="OnCounterClicked"
+                HorizontalOptions="Center">
+                <Button.Behaviors>
+                    <controls:CustomBackgroundColorBehavior CustomBackgroundColor="YellowGreen" />
+                </Button.Behaviors>
+            </Button>
 
         </VerticalStackLayout>
     </ScrollView>
